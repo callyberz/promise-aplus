@@ -31,9 +31,10 @@ bun run test
 ## Takeaways
 
 Promise can only have 3 status: `pending`, `fulfilled`, `rejected`.
-When in `pending`, can transit to `fulfilled` or `rejected`.
-When in `fulfilled` or `rejected`, can't transit to other status && must have value.
-When in `rejected`, can't transit to `fulfilled` && must have reason.
+
+- When in `pending`, can transit to `fulfilled` or `rejected`.
+- When in `fulfilled` or `rejected`, can't transit to other status && must have value.
+- When in `rejected`, can't transit to `fulfilled` && must have reason.
 
 ## `Promise` constructor
 
