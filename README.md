@@ -6,6 +6,8 @@ A simple Promise/A+ implementation in TypeScript.
 
 Promise/A+ is a specification for asynchronous JavaScript promises. This project is a simple implementation of the specification in TypeScript. For more information on the specification, see [https://promisesaplus.com/](https://promisesaplus.com/).
 
+![Flowchart](https://github.com/callyberz/promise-aplus/blob/main/promiseAPlus-flowchart.png?raw=true)
+
 ## Running locally
 
 To install dependencies:
