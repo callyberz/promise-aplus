@@ -31,13 +31,14 @@ bun run test
 ## Takeaways
 
 Promise can only have 3 status: `pending`, `fulfilled`, `rejected`.
-When in `pending`, can transit to `fulfilled` or `rejected`
-When in `fulfilled` or `rejected`, can't transit to other status && must have value
-When in `rejected`, can't transit to `fulfilled` && must have reason
+When in `pending`, can transit to `fulfilled` or `rejected`.
+When in `fulfilled` or `rejected`, can't transit to other status && must have value.
+When in `rejected`, can't transit to `fulfilled` && must have reason.
 
 ## `Promise` constructor
 
-- The executor function in constructor takes two arguments, `resolve` and `reject`, both are functions. It is called immediately when PromiseAPlus instance is created.
+- The executor function in constructor takes two arguments, `resolve` and `reject`, both are functions.
+- Constructor is called immediately when PromiseAPlus instance is created.
 
 > Most of the time executor is async, e.g. `setTimeout`, `fetch`, `XMLHttpRequest`, etc.
 
@@ -69,13 +70,13 @@ executor(this.resolve.bind(this), this.reject.bind(this));
 
 ## `catch` method
 
-- `catch` method is a simply `then(undefined, onRejected)`
+- `catch` method is a simply `then(undefined, onRejected)`.
 - `catch` method will be called when chaining `catch` method on Promise instance.
 
 ## `finally` method
 
-- `finally` method is a simply `then(onFinally, onFinally)`
-- `finally` method will be called when chaining `finally` method on Promise instance no matter `fulfilled` or `rejected`.
+- `finally` method is a simply `then(onFinally, onFinally)`.
+- `finally` method will be called when chaining `finally` method on Promise instance no matter `fulfilled` or `rejected`
 
 ## License
 
@@ -83,5 +84,5 @@ This project was created using `bun init` in bun v1.0.21. [Bun](https://bun.sh) 
 
 ## References
 
-- [StackOverflow](https://stackoverflow.com/questions/31324110/why-does-the-promise-constructor-require-a-function-that-calls-resolve-when-co).
-- [Promise/A+](https://promisesaplus.com/).
+- [StackOverflow](https://stackoverflow.com/questions/31324110/why-does-the-promise-constructor-require-a-function-that-calls-resolve-when-co)
+- [Promise/A+](https://promisesaplus.com/)
